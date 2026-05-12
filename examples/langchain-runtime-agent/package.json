@@ -1,0 +1,14 @@
+{
+  "name": "atbash-langchain-runtime-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node run.mjs"
+  },
+  "dependencies": {
+    "@atbash/langchain": "file:../..",
+    "@atbash/sdk": "0.3.8",
+    "@langchain/core": "^1.1.40",
+    "zod": "^3.25.76"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "@atbash/langchain",
+  "version": "0.2.0",
+  "description": "Atbash safety guard for LangChain DynamicStructuredTool",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "atbash",
+    "langchain",
+    "ai-safety",
+    "agent-safety",
+    "tool-guard",
+    "judge",
+    "policy"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@atbash/sdk": "0.3.8",
+    "@langchain/core": ">=0.3.0"
+  },
+  "devDependencies": {
+    "@atbash/sdk": "0.3.8",
+    "@langchain/core": "^1.1.45",
+    "@types/node": "^25.7.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
