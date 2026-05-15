@@ -1,5 +1,7 @@
-import type { AtbashClient } from "@atbash/sdk";
+import { setupTelemetry, type AtbashClient } from "@atbash/sdk";
 import type { DynamicStructuredTool } from "@langchain/core/tools";
+
+setupTelemetry({ enabled: true, source: "plugin:langchain" });
 
 export class AtbashGuardError extends Error {
   readonly atbashVerdict: string;
